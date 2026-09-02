@@ -20,6 +20,10 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    setMobileOpen(false);
+  }, [pathname]);
+
   const navLinks = [
     { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
@@ -33,24 +37,24 @@ export default function Navbar() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 bg-white/95 dark:bg-[#080B11]/95 backdrop-blur-md border-b border-slate-200/90 dark:border-white/10 transition-all duration-300 ${
-        scrolled ? 'py-3 shadow-md' : 'py-3.5 md:py-4 shadow-sm'
+        scrolled ? 'py-2.5 sm:py-3 shadow-md' : 'py-3 sm:py-3.5 md:py-4 shadow-sm'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between gap-4">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 flex items-center justify-between gap-2 sm:gap-4">
         {/* Brand Logo & Name */}
-        <Link href="/" className="flex items-center gap-3 group flex-shrink-0">
-          <div className="relative h-10 w-10 md:h-11 md:w-11 flex-shrink-0 bg-white rounded-sm overflow-hidden p-1 border border-slate-200 dark:border-white/10 shadow-sm group-hover:border-blue-500 transition-all">
+        <Link href="/" className="flex items-center gap-2.5 sm:gap-3 group min-w-0 flex-1 sm:flex-initial">
+          <div className="relative h-9 w-9 sm:h-10 sm:w-10 md:h-11 md:w-11 flex-shrink-0 bg-white rounded-sm overflow-hidden p-1 border border-slate-200 dark:border-white/10 shadow-sm group-hover:border-blue-500 transition-all">
             <img
               src={theme === 'dark' ? '/ArcLogoDark.jpeg' : '/ArcLogo.png'}
               alt={BRAND_INFO.name}
               className="w-full h-full object-contain"
             />
           </div>
-          <div className="flex flex-col">
-            <span className="font-display text-sm md:text-base font-bold tracking-tight text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors leading-tight">
+          <div className="flex flex-col min-w-0">
+            <span className="font-display text-xs sm:text-sm md:text-base font-bold tracking-tight text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors leading-tight truncate">
               THE ARCHSTRUCT CONSULTANT
             </span>
-            <span className="text-[9px] md:text-[10px] font-mono tracking-widest text-slate-500 dark:text-slate-400 uppercase">
+            <span className="hidden sm:block text-[9px] md:text-[10px] font-mono tracking-widest text-slate-500 dark:text-slate-400 uppercase truncate">
               Planning • Engineering • Execution
             </span>
           </div>
@@ -89,11 +93,11 @@ export default function Navbar() {
         </div>
 
         {/* Mobile Actions */}
-        <div className="flex items-center gap-3 lg:hidden">
+        <div className="flex items-center gap-2 sm:gap-3 lg:hidden flex-shrink-0">
           <ThemeToggle />
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="p-2 text-slate-800 dark:text-slate-300 hover:text-blue-600 dark:hover:text-white border border-slate-300 dark:border-white/10 bg-white/80 dark:bg-transparent"
+            className="w-9 h-9 rounded-sm flex items-center justify-center text-slate-800 dark:text-slate-200 hover:text-blue-600 dark:hover:text-white border border-slate-300 dark:border-white/15 bg-slate-100/80 dark:bg-white/[0.06] transition-all active:scale-95 shadow-sm"
             aria-label="Toggle navigation"
           >
             {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -103,15 +107,17 @@ export default function Navbar() {
 
       {/* Mobile Menu Drawer */}
       {mobileOpen && (
-        <div className="lg:hidden bg-white dark:bg-[#080B11] border-b border-slate-200 dark:border-white/10 px-6 py-8 text-slate-900 dark:text-white shadow-xl animate-page-reveal">
-          <div className="flex flex-col gap-5 text-sm font-mono tracking-widest uppercase">
+        <div className="lg:hidden bg-white dark:bg-[#080B11] border-b border-slate-200 dark:border-white/10 px-6 py-6 text-slate-900 dark:text-white shadow-2xl animate-page-reveal max-h-[calc(100vh-4.5rem)] overflow-y-auto">
+          <div className="flex flex-col gap-3 text-xs sm:text-sm font-mono tracking-wider sm:tracking-widest uppercase">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
                 onClick={() => setMobileOpen(false)}
                 href={link.href}
-                className={`py-1 transition-colors ${
-                  pathname === link.href ? 'text-blue-600 dark:text-blue-400 font-bold' : 'hover:text-blue-600 dark:hover:text-blue-400'
+                className={`py-2 px-3 rounded transition-colors ${
+                  pathname === link.href
+                    ? 'text-blue-600 dark:text-blue-400 font-bold bg-blue-50 dark:bg-blue-950/40 border-l-2 border-blue-600 dark:border-blue-400'
+                    : 'hover:text-blue-600 dark:hover:text-blue-400 hover:bg-slate-100 dark:hover:bg-white/5'
                 }`}
               >
                 {link.name}
@@ -119,11 +125,11 @@ export default function Navbar() {
             ))}
           </div>
 
-          <div className="mt-8 pt-6 border-t border-slate-200 dark:border-white/10 flex flex-col gap-3">
+          <div className="mt-6 pt-5 border-t border-slate-200 dark:border-white/10 flex flex-col gap-3">
             <Link
               onClick={() => setMobileOpen(false)}
               href="/contact"
-              className="flex items-center justify-center gap-2 bg-blue-600 text-white text-xs font-mono uppercase py-3.5 font-semibold"
+              className="flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-500 text-white text-xs font-mono uppercase py-3 px-4 font-semibold shadow-sm transition-all active:scale-95"
             >
               <MessageSquare className="w-4 h-4" />
               <span>Initiate Project Consultation</span>
