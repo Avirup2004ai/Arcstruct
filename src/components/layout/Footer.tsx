@@ -29,7 +29,7 @@ export default function Footer() {
             </Link>
 
             <p className="mt-6 text-sm text-slate-600 dark:text-slate-400 leading-relaxed font-light">
-              An integrated architectural planning, seismic structural design, geotechnical soil testing, NDT assessment, and turnkey construction consultancy led by <strong className="text-slate-900 dark:text-slate-200">{BRAND_INFO.founder}</strong> (11+ Years Experience).
+              Civil engineering consultancy delivering innovative, sustainable, safe, and economically optimized solutions. Led by <strong className="text-slate-900 dark:text-slate-200">{BRAND_INFO.founder}</strong> — B.Tech, M.Tech (Structural), Chartered Engineer, Empanelled Class I (KMC & MED).
             </p>
 
             <div className="mt-8 space-y-3 text-xs font-mono text-slate-600 dark:text-slate-400">
@@ -122,7 +122,7 @@ export default function Footer() {
           <div className="flex items-center gap-6">
             <span>IS Code & NBC Standard Practice</span>
             <span>•</span>
-            <span>Structural Authority</span>
+            <span>{BRAND_INFO.secondaryTagline}</span>
           </div>
         </div>
       </div>

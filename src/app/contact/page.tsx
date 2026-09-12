@@ -31,7 +31,32 @@ export default function ContactPage() {
       <section className="py-24 px-6 lg:px-12">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
           {/* Left Column: Office Specs & Direct Channels */}
-          <div className="lg:col-span-5 space-y-8">
+          <div className="lg:col-span-5 space-y-6">
+            {/* Principal Consultant Card */}
+            <div className="p-5 bg-white dark:bg-[#0D121F] border border-slate-200 dark:border-white/10 shadow-sm flex items-center gap-4">
+              <div className="w-16 h-16 rounded-sm overflow-hidden flex-shrink-0 border border-slate-200 dark:border-white/10 bg-slate-100">
+                <img
+                  src={BRAND_INFO.founderImage}
+                  alt={BRAND_INFO.founder}
+                  className="w-full h-full object-cover object-top"
+                />
+              </div>
+              <div className="min-w-0">
+                <span className="text-[10px] font-mono text-blue-600 dark:text-blue-400 uppercase tracking-widest block font-semibold">
+                  Lead Engineering Desk
+                </span>
+                <h3 className="text-base font-display font-bold text-slate-900 dark:text-white truncate">
+                  {BRAND_INFO.founder}
+                </h3>
+                <p className="text-[11px] font-mono text-slate-500 dark:text-slate-400 truncate">
+                  M.Tech (Structural) • Chartered Engineer
+                </p>
+                <p className="text-[10px] font-mono text-blue-600 dark:text-blue-400">
+                  Empanelled Class I (KMC & MED)
+                </p>
+              </div>
+            </div>
+
             <div className="p-8 bg-white dark:bg-[#0D121F] border border-slate-200 dark:border-white/10 space-y-6 shadow-sm dark:shadow-none">
               <h2 className="text-xl font-display font-medium text-slate-900 dark:text-white mb-4">
                 Headquarters & Coordinates

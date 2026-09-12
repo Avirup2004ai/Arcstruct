@@ -10,7 +10,7 @@ export default function AboutStatement() {
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 pb-12 border-b border-slate-200 dark:border-white/10">
           <div className="max-w-2xl">
             <span className="text-xs font-mono uppercase tracking-widest text-blue-600 dark:text-blue-400 font-semibold block mb-3">
-              [THE ARCHSTRUCT PRACTICE]
+              [THE ARCHSTRUCT PRACTICE] • {BRAND_INFO.secondaryTagline}
             </span>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-light font-display text-slate-900 dark:text-slate-100 leading-tight">
               "{BRAND_INFO.tagline}"

@@ -3,9 +3,113 @@ import { ServiceItem, ProjectItem, IndustryItem, InsightItem } from './types';
 export const BRAND_INFO = {
   name: "THE ARCHSTRUCT CONSULTANT",
   shortName: "ARCHSTRUCT",
-  tagline: "We plan, We Design, We Build Your Dreams.",
+  tagline: "From Concept to Creation, Engineered with Excellence.",
+  secondaryTagline: "Engineering Excellence. Building Tomorrow.",
+  taglines: [
+    "From Concept to Creation, Engineered with Excellence.",
+    "Engineering Excellence. Building Tomorrow."
+  ],
+  vision: "To be a trusted and respected civil engineering consultancy delivering innovative, sustainable, safe, and economically optimized infrastructure solutions that stand the test of time and contribute to a better built environment.",
+  mission: {
+    statement: "To provide high-quality, practical, and technically sound engineering solutions through:",
+    pillars: [
+      {
+        number: "01",
+        title: "Architectural & Structural Excellence",
+        description: "Excellence in Architectural & Structural Engineering Design solutions for Residential, Commercial, Industrial, Institutional & other purposes Structure."
+      },
+      {
+        number: "02",
+        title: "Constructible & Economical Engineering",
+        description: "Safe, economical, and constructible design solutions."
+      },
+      {
+        number: "03",
+        title: "Geotechnical & Soil Testing",
+        description: "Provide accurate, reliable, and scientifically sound soil testing and geotechnical investigation services that enable safe, economical, and sustainable construction."
+      },
+      {
+        number: "04",
+        title: "High-Precision Geomatics & Surveys",
+        description: "Utilizing modern technologies provide high-precision land, topographical, cadastral, and construction surveys."
+      },
+      {
+        number: "05",
+        title: "Diagnostic NDT & Structural Assessment",
+        description: "Provide accurate, reliable, and scientifically driven structural assessment and Non-Destructive Testing (NDT) services that help clients understand the condition, safety, strength, and durability of existing structures."
+      },
+      {
+        number: "06",
+        title: "Thoughtful Interior Architecture",
+        description: "Create beautiful, functional, and thoughtfully designed interior spaces that reflect our clients’ vision, enhance their everyday experiences, and deliver lasting value."
+      },
+      {
+        number: "07",
+        title: "Sustainable & Turnkey Civil Execution",
+        description: "Deliver high-quality, safe, sustainable, and cost-effective construction solutions that transform designs and ideas into durable, functional, and valuable built environments."
+      }
+    ]
+  },
+  coreValues: [
+    {
+      number: "01",
+      title: "Engineering Excellence",
+      description: "We pursue accuracy, quality, and technical excellence in every design and project."
+    },
+    {
+      number: "02",
+      title: "Integrity & Ethics",
+      description: "We conduct our work with honesty, transparency, accountability, and professional responsibility."
+    },
+    {
+      number: "03",
+      title: "Client-Centric Approach",
+      description: "We understand our clients' needs and deliver solutions that provide genuine value."
+    },
+    {
+      number: "04",
+      title: "Innovation",
+      description: "We continuously explore better methods, technologies, materials, and engineering solutions."
+    },
+    {
+      number: "05",
+      title: "Safety First",
+      description: "Safety is fundamental to every design, decision, and recommendation we make."
+    },
+    {
+      number: "06",
+      title: "Sustainability",
+      description: "We promote efficient use of materials and resources while designing for long-term performance."
+    },
+    {
+      number: "07",
+      title: "Reliability",
+      description: "We believe that consistency, accuracy, and timely delivery create lasting professional relationships."
+    },
+    {
+      number: "08",
+      title: "Continuous Learning",
+      description: "We continuously upgrade our knowledge, skills, technology, and engineering practices."
+    }
+  ],
   founder: "Er. Tanmoy Das",
   founderTitle: "Founder & Chief Executive Officer",
+  founderImage: "/people/tanmoy-ceo.jpeg",
+  founderQualifications: [
+    "B.Tech (Civil)",
+    "M.Tech (Structural Engg.)",
+    "M.I.E",
+    "M.I.G.S",
+    "Chartered Engineer"
+  ],
+  founderEmpanelment: "Empanelled Structural Engineer (Class I), Geotechnical Engineer (Class I), L.B.S. (Class I) of K.M.C & M.E.D, Govt. Of W.B.",
+  founderEmpanelmentBadges: [
+    "Empanelled Structural Engineer (Class I) – K.M.C & M.E.D, Govt. Of W.B.",
+    "Empanelled Geotechnical Engineer (Class I) – K.M.C & M.E.D, Govt. Of W.B.",
+    "Licensed Building Surveyor L.B.S. (Class I) – K.M.C & M.E.D, Govt. Of W.B.",
+    "Chartered Engineer (India) • M.I.E • M.I.G.S"
+  ],
+  founderExperience: "He has over 11 years of professional experience in structural design, specializing in the analysis and design of various categories of structures. His technical proficiency encompasses design of reinforced concrete, steel structures, PEBs, structural assessment, and delivering safe, efficient, and cost-effective engineering solutions. Also his expertise includes geotechnical investigation, foundation engineering.",
   experienceYears: 11,
   projectsCount: "250+",
   clientsCount: "100+",

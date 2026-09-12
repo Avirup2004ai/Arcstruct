@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     default: `${BRAND_INFO.name} | Architectural Planning & Structural Engineering`,
     template: `%s | ${BRAND_INFO.name}`,
   },
-  description: 'Premier architectural planning, structural design & drawing, geotechnical soil testing, NDT structural audits, and construction engineering consultancy led by Er. Tanmoy Das.',
+  description: 'From Concept to Creation, Engineered with Excellence. Civil engineering consultancy specializing in architectural planning, seismic structural design, geotechnical soil testing, NDT audits, and turnkey construction led by Er. Tanmoy Das (Chartered Engineer).',
   icons: {
     icon: [
       { url: '/favicon.png', type: 'image/png' },

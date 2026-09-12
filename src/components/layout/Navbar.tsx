@@ -55,7 +55,7 @@ export default function Navbar() {
               THE ARCHSTRUCT CONSULTANT
             </span>
             <span className="hidden sm:block text-[9px] md:text-[10px] font-mono tracking-widest text-slate-500 dark:text-slate-400 uppercase truncate">
-              Planning • Engineering • Execution
+              {BRAND_INFO.secondaryTagline}
             </span>
           </div>
         </Link>
