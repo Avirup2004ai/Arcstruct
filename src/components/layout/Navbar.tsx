@@ -50,11 +50,11 @@ export default function Navbar() {
               className="w-full h-full object-contain"
             />
           </div>
-          <div className="flex flex-col flex-shrink-0">
-            <span className="font-display text-sm sm:text-base md:text-lg lg:text-xl font-bold tracking-tight text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors leading-tight whitespace-nowrap pb-1 border-b-2 border-emerald-500 dark:border-emerald-400">
+          <div className="flex flex-col justify-center flex-shrink-0">
+            <span className="font-display text-sm sm:text-base md:text-lg lg:text-xl font-bold tracking-tight text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors leading-none whitespace-nowrap pb-[2px] border-b-2 border-emerald-500 dark:border-emerald-400">
               THE ARCHSTRUCT CONSULTANT
             </span>
-            <span className="hidden sm:block text-[9px] md:text-[10px] font-mono tracking-wider sm:tracking-widest text-slate-500 dark:text-slate-400 uppercase whitespace-nowrap pt-1">
+            <span className="hidden sm:block text-[9px] md:text-[10px] font-mono tracking-wider sm:tracking-widest text-slate-500 dark:text-slate-400 uppercase whitespace-nowrap leading-tight pt-1">
               {BRAND_INFO.secondaryTagline}
             </span>
           </div>

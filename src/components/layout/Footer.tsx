@@ -18,11 +18,11 @@ export default function Footer() {
                   className="w-full h-full object-contain"
                 />
               </div>
-              <div className="flex flex-col">
-                <span className="font-display text-lg md:text-xl font-bold tracking-tight text-slate-900 dark:text-white pb-1 border-b-2 border-emerald-500 dark:border-emerald-400">
+              <div className="flex flex-col justify-center">
+                <span className="font-display text-lg md:text-xl font-bold tracking-tight text-slate-900 dark:text-white leading-none whitespace-nowrap pb-[2px] border-b-2 border-emerald-500 dark:border-emerald-400">
                   {BRAND_INFO.name}
                 </span>
-                <span className="text-[10px] font-mono tracking-widest text-slate-500 dark:text-slate-400 uppercase pt-1">
+                <span className="text-[10px] font-mono tracking-widest text-slate-500 dark:text-slate-400 uppercase leading-tight pt-1">
                   {BRAND_INFO.tagline}
                 </span>
               </div>
