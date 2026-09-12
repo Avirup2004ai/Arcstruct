@@ -40,9 +40,9 @@ export default function Navbar() {
         scrolled ? 'py-2.5 sm:py-3 shadow-md' : 'py-3 sm:py-3.5 md:py-4 shadow-sm'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 flex items-center justify-between gap-2 sm:gap-4">
+      <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-12 flex items-center justify-between gap-3 xl:gap-6">
         {/* Brand Logo & Name */}
-        <Link href="/" className="flex items-center gap-2.5 sm:gap-3 group min-w-0 flex-1 sm:flex-initial">
+        <Link href="/" className="flex items-center gap-2.5 sm:gap-3 group flex-shrink-0">
           <div className="relative h-9 w-9 sm:h-10 sm:w-10 md:h-11 md:w-11 flex-shrink-0 bg-white rounded-sm overflow-hidden p-1 border border-slate-200 dark:border-white/10 shadow-sm group-hover:border-blue-500 transition-all">
             <img
               src={theme === 'dark' ? '/ArcLogoDark.jpeg' : '/ArcLogo.png'}
@@ -50,18 +50,18 @@ export default function Navbar() {
               className="w-full h-full object-contain"
             />
           </div>
-          <div className="flex flex-col min-w-0">
-            <span className="font-display text-xs sm:text-sm md:text-base font-bold tracking-tight text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors leading-tight truncate">
+          <div className="flex flex-col flex-shrink-0">
+            <span className="font-display text-xs sm:text-sm md:text-base font-bold tracking-tight text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors leading-tight whitespace-nowrap">
               THE ARCHSTRUCT CONSULTANT
             </span>
-            <span className="hidden sm:block text-[9px] md:text-[10px] font-mono tracking-widest text-slate-500 dark:text-slate-400 uppercase truncate">
+            <span className="hidden sm:block text-[9px] md:text-[10px] font-mono tracking-wider sm:tracking-widest text-slate-500 dark:text-slate-400 uppercase whitespace-nowrap">
               {BRAND_INFO.secondaryTagline}
             </span>
           </div>
         </Link>
 
         {/* Center Navigation Links */}
-        <nav className="hidden lg:flex items-center gap-5 xl:gap-7 text-xs font-mono tracking-widest uppercase text-slate-700 dark:text-slate-300 font-medium">
+        <nav className="hidden lg:flex items-center gap-4 xl:gap-6 2xl:gap-8 text-xs font-mono tracking-wider xl:tracking-widest uppercase text-slate-700 dark:text-slate-300 font-medium whitespace-nowrap">
           {navLinks.map((link) => {
             const isActive = pathname === link.href;
             return (
@@ -81,11 +81,11 @@ export default function Navbar() {
         </nav>
 
         {/* Right CTA & Theme Toggle (Cleanly separated with ample gap) */}
-        <div className="hidden lg:flex items-center gap-4 xl:gap-5 flex-shrink-0 pl-2">
+        <div className="hidden lg:flex items-center gap-3 xl:gap-4 flex-shrink-0 pl-2">
           <ThemeToggle />
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white text-xs font-mono uppercase tracking-wider px-5 py-2.5 transition-all shadow-sm hover:shadow-md active:scale-95 font-semibold whitespace-nowrap"
+            className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white text-xs font-mono uppercase tracking-wider px-4 xl:px-5 py-2.5 transition-all shadow-sm hover:shadow-md active:scale-95 font-semibold whitespace-nowrap"
           >
             <span>Discuss Project</span>
             <ArrowUpRight className="w-3.5 h-3.5" />
