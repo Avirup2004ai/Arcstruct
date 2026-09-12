@@ -42,8 +42,8 @@ export default function Navbar() {
     >
       <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-12 flex items-center justify-between gap-3 xl:gap-6">
         {/* Brand Logo & Name */}
-        <Link href="/" className="flex items-center gap-2.5 sm:gap-3 group flex-shrink-0">
-          <div className="relative h-9 w-9 sm:h-10 sm:w-10 md:h-11 md:w-11 flex-shrink-0 bg-white rounded-sm overflow-hidden p-1 border border-slate-200 dark:border-white/10 shadow-sm group-hover:border-blue-500 transition-all">
+        <Link href="/" className="flex items-center gap-2.5 sm:gap-3.5 group flex-shrink-0">
+          <div className="relative h-11 w-11 sm:h-12 sm:w-12 md:h-14 md:w-14 flex-shrink-0 bg-white rounded-sm overflow-hidden p-1 border border-slate-200 dark:border-white/10 shadow-sm group-hover:border-blue-500 transition-all">
             <img
               src={theme === 'dark' ? '/ArcLogoDark.jpeg' : '/ArcLogo.png'}
               alt={BRAND_INFO.name}
@@ -51,10 +51,10 @@ export default function Navbar() {
             />
           </div>
           <div className="flex flex-col flex-shrink-0">
-            <span className="font-display text-xs sm:text-sm md:text-base font-bold tracking-tight text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors leading-tight whitespace-nowrap">
+            <span className="font-display text-sm sm:text-base md:text-lg lg:text-xl font-bold tracking-tight text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors leading-tight whitespace-nowrap pb-1 border-b-2 border-emerald-500 dark:border-emerald-400">
               THE ARCHSTRUCT CONSULTANT
             </span>
-            <span className="hidden sm:block text-[9px] md:text-[10px] font-mono tracking-wider sm:tracking-widest text-slate-500 dark:text-slate-400 uppercase whitespace-nowrap">
+            <span className="hidden sm:block text-[9px] md:text-[10px] font-mono tracking-wider sm:tracking-widest text-slate-500 dark:text-slate-400 uppercase whitespace-nowrap pt-1">
               {BRAND_INFO.secondaryTagline}
             </span>
           </div>

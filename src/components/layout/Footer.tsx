@@ -11,7 +11,7 @@ export default function Footer() {
           {/* Brand Column */}
           <div className="lg:col-span-4">
             <Link href="/" className="flex items-center gap-3.5 group">
-              <div className="h-11 w-11 flex-shrink-0 bg-white rounded-sm overflow-hidden p-1 border border-slate-200 dark:border-white/10 shadow-sm">
+              <div className="h-12 w-12 md:h-14 md:w-14 flex-shrink-0 bg-white rounded-sm overflow-hidden p-1 border border-slate-200 dark:border-white/10 shadow-sm">
                 <img
                   src="/ArcLogo.png"
                   alt={BRAND_INFO.name}
@@ -19,10 +19,10 @@ export default function Footer() {
                 />
               </div>
               <div className="flex flex-col">
-                <span className="font-display text-base font-bold tracking-tight text-slate-900 dark:text-white">
+                <span className="font-display text-lg md:text-xl font-bold tracking-tight text-slate-900 dark:text-white pb-1 border-b-2 border-emerald-500 dark:border-emerald-400">
                   {BRAND_INFO.name}
                 </span>
-                <span className="text-[10px] font-mono tracking-widest text-slate-500 dark:text-slate-400 uppercase">
+                <span className="text-[10px] font-mono tracking-widest text-slate-500 dark:text-slate-400 uppercase pt-1">
                   {BRAND_INFO.tagline}
                 </span>
               </div>
